@@ -56,8 +56,10 @@ elif distance == 0:
 else:
     a = distance / 2
     h = sqrt((radius ** 2) - (a ** 2))
-    angle = round(degrees(acos(a / radius)), 2)
-    seqment_square = (radius ** 2) * (radians(angle) - sin(radians(angle)))
+    angle = 2 * round(degrees(acos(a / radius)), 3)
+    print(angle, " degrees")
+    seqment_square = (radius ** 2) * (radians(angle) - sin(radians(angle))) 
+    print(seqment_square)
     small_squares = small_squares - seqment_square
     if small_squares > big_square:
         output_data.write("YES")
